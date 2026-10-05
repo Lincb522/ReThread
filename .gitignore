@@ -1,0 +1,31 @@
+# Build and local runtime
+.build/
+.swiftpm/
+dist/
+DerivedData/
+__pycache__/
+*.py[cod]
+.DS_Store
+.venv/
+venv/
+.env
+.env.*
+*.log
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*
+*.jsonl
+auth.json
+backups/
+work/
+
+# Local evidence and historical deliveries
+/docs/*
+!/docs/assets/
+/previews/
+/SHA256.json
+/VERIFICATION.md
+/PERFORMANCE.md
+/DELETE-DIAGNOSTICS.md
+/UPSTREAM-README.md

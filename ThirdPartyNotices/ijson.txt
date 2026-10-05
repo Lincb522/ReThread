@@ -1,0 +1,6 @@
+ijson 3.5.1 (BSD-3-Clause)
+Upstream: https://github.com/ICRAR/ijson
+Source: https://pypi.org/project/ijson/3.5.1/
+Vendored Python backend; no runtime download or C ABI dependency.
+One local Lexer prefix-compaction patch prevents retained consumed tokens while strings span input buffers. See ijson-bounded-buffer.patch. Original source tarball SHA-256: af40bd1a85f55db0b8b30715c858761306bd92d5590148636f75c3309e6e76bd.
+License: ijson-LICENSE.txt

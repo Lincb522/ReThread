@@ -1,0 +1,16 @@
+--- work/build16/before/ijson-python.py	2026-10-05 20:35:53
++++ outputs/Codex-Conversation-Manager/vendor/ijson/backends/python.py	2026-10-05 20:41:24
+@@ -86,7 +86,12 @@
+                             data = ''
+                         if not data:
+                             raise common.IncompleteJSONError('Incomplete string lexeme')
+-                        buf += data
++                        # ReThread: compact consumed tokens before extending a split
++                        # string, keeping the lexer buffer proportional to one token.
++                        discarded += pos
++                        buf = buf[pos:] + data
++                        start -= pos
++                        pos = 0
+                 send((discarded + pos, buf[pos:end + 1]))
+                 pos = end + 1
+             else:
